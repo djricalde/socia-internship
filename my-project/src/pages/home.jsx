@@ -73,7 +73,7 @@ export default function Home({ dark, setDark }) {
             />
           </motion.div>
           <div>
-            <p className="font-semibold tracking-tight dark:text-white">DylanTech.</p>
+            <p className="font-semibold tracking-tight dark:text-white">XerTech.</p>
             <p className="text-xs opacity-70 dark:text-white/70">Full-Stack Developer</p>
           </div>
         </motion.div>
@@ -83,7 +83,7 @@ export default function Home({ dark, setDark }) {
           {[
             { href: "#home", label: "Home" },
             { href: "#about", label: "About" },
-            { href: "#tech", label: "Tech" },
+            { href: "#skills", label: "Skills" },
             { href: "#project", label: "Project" },
             { href: "#contact", label: "Contact" }
           ].map((link, index) => (

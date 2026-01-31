@@ -2,7 +2,7 @@
 import { motion } from "framer-motion";
 import { Globe, Terminal, Database, Cpu } from "lucide-react";
 
-export default function Tech() {
+export default function Skills() {
   // Animation variants
   const container = {
     hidden: { opacity: 0 },
@@ -52,7 +52,7 @@ export default function Tech() {
 
   return (
     <section 
-      id="tech"
+      id="skills"
       className="min-h-screen py-20 px-8 transition-colors
                  bg-[hsl(220_25%_98%)] text-[hsl(222_25%_10%)]
                  dark:bg-[hsl(225_20%_7%)] dark:text-white"
@@ -66,12 +66,7 @@ export default function Tech() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <div className="inline-flex items-center gap-2 rounded-full border px-3 py-2 text-xs mb-4
-                          border-purple-500/20 bg-purple-500/5
-                          dark:border-blue-500/30 dark:bg-blue-500/10">
-            <span className="text-blue-600 dark:text-blue-400">⚡</span>
-            <span>Expertise</span>
-          </div>
+         
           
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
             Technical Toolkit

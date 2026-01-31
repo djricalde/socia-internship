@@ -72,12 +72,6 @@ export default function Project() {
           transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
           className="text-center mb-16"
         >
-          <div className="inline-flex items-center gap-2 rounded-full border px-3 py-2 text-xs mb-4
-                          border-purple-500/20 bg-purple-500/5
-                          dark:border-blue-500/30 dark:bg-blue-500/10">
-            <span className="text-blue-600 dark:text-blue-400">💼</span>
-            <span>Work</span>
-          </div>
           
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
             Projects

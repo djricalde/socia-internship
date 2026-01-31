@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import Home from "./home";
 import About from "../components/About";
-import Tech from "../components/Tech";
+import Skills from "../components/Skills";
 import Project from "../components/Project";
 import Contact from "../components/Contact";
 import Footer from "../components/Footer";
@@ -24,7 +24,7 @@ export default function Landing() {
       <div className="h-screen overflow-y-auto scroll-smooth">
         <Home dark={dark} setDark={setDark} />
         <About dark={dark} />
-        <Tech dark ={dark} />
+        <Skills dark ={dark} />
         <Project dark ={dark} />
         <Contact dark ={dark} />
         <Footer dark = {dark} /> 

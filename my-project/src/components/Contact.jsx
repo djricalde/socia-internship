@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { ArrowRight, ExternalLink, Github, Linkedin, Facebook, Instagram, Mail } from "lucide-react";
+import { ArrowRight, ExternalLink, Github, Linkedin, Facebook, Instagram, Mail, Send } from "lucide-react";
 import emailjs from '@emailjs/browser';
 
 export default function Contact() {
@@ -73,13 +73,8 @@ export default function Contact() {
           transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
           className="text-center mb-16"
         >
-          <div className="inline-flex items-center gap-2 rounded-full border px-3 py-2 text-sm mb-4
-                          border-blue-500/20 bg-blue-500/5
-                          dark:border-blue-500/30 dark:bg-blue-500/10">
-            <span className="text-blue-600 dark:text-blue-400">✉️</span>
-            <span>Reach Out</span>
-          </div>
           
+
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
             Let's Connect
           </h2>
@@ -181,15 +176,38 @@ export default function Contact() {
                            hover:bg-blue-600 transition-colors
                            disabled:opacity-50 disabled:cursor-not-allowed"
               >
-                {sending ? "Sending..." : "Send message"}
-                <ArrowRight className="h-4 w-4" />
+                <Send className=" h-4 w-4" />
+                {sending ? "Sending..." : "Send Message"}
+                
               </motion.button>
             </form>
           </motion.div>
-
+          
           {/* Right Column */}
           <div className="grid gap-6 content-start">
-            {/* Social Links Card */}
+            
+            {/* Collaboration Card */}           
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ 
+                delay: 0.2,
+                duration: 0.6,
+                ease: [0.16, 1, 0.3, 1]
+              }}
+              className="rounded-3xl border p-6 shadow-lg
+                         border-gray-200 bg-white
+                         dark:border-blue-500/20 dark:bg-[hsl(225_18%_10%)]"
+            >
+              <div className="text-sm font-medium mb-2">Collaboration</div>
+              <p className="text-sm text-gray-600 dark:text-white/70">
+                I'm passionate about building impactful software. If you have a project
+                in mind or just want to chat tech, feel free to reach out!
+              </p>
+            </motion.div>
+
+           {/* Social Links Card */}
             <motion.div
               initial={{ opacity: 0, x: 30 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -238,27 +256,7 @@ export default function Contact() {
                 ))}
               </div>
             </motion.div>
-
-            {/* Collaboration Card */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ 
-                delay: 0.2,
-                duration: 0.6,
-                ease: [0.16, 1, 0.3, 1]
-              }}
-              className="rounded-3xl border p-6 shadow-lg
-                         border-gray-200 bg-white
-                         dark:border-purple-500/20 dark:bg-[hsl(225_18%_10%)]"
-            >
-              <div className="text-sm font-medium mb-2">Collaboration</div>
-              <p className="text-sm text-gray-600 dark:text-white/70">
-                I'm passionate about building impactful software. If you have a project
-                in mind or just want to chat tech, feel free to reach out.
-              </p>
-            </motion.div>
+            
           </div>
         </div>
       </div>

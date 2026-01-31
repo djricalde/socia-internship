@@ -23,7 +23,7 @@ export default function Footer() {
           transition={{ delay: 0.2, duration: 0.5 }}
           className="text-sm text-gray-600 dark:text-white/70"
         >
-          © {year} DylanTech. All rights reserved.
+          © {year} All rights reserved.
         </motion.div>
         
         <div className="flex items-center gap-2">

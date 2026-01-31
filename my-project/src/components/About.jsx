@@ -54,14 +54,8 @@ export default function About() {
       >
         {/* Header */}
         <div className="text-center mb-16">
-          <motion.div 
-            variants={itemVariants}
-            className="inline-flex items-center gap-2 rounded-full border px-3 py-2 text-xs mb-4
-                       border-blue-500/20 bg-purple-500/5
-                       dark:border-blue-500/30 dark:bg-blue-500/10"
-          >
-            <span className="text-blue-600 dark:text-blue-400">✦</span>
-            <span>Philosophy</span>
+          <motion.div>
+           
           </motion.div>
           
           <motion.h2 
