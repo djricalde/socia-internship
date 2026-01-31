@@ -67,8 +67,8 @@ export default function About() {
           <motion.h2 
             variants={itemVariants}
             className="text-4xl md:text-5xl font-bold mb-4"
-          >
-            Engineering with Purpose
+          > 
+            Software Dev with Purpose
           </motion.h2>
           
           <motion.p 
@@ -96,7 +96,8 @@ export default function About() {
               variants={itemVariants}
               className="text-sm mb-6 text-gray-600 dark:text-white/70"
             >
-              My development process is centered around creating value through code. I believe that a great application isn't just about the features, but the reliability and performance that happens under the hood.
+              My development journey is focused on learning how to create real value through code.
+              As an aspiring full-stack developer, I’m learning that great applications aren’t just about features, but about thoughtful structure, performance, and reliability working behind the scenes.
             </motion.p>
 
             <motion.div 
@@ -113,7 +114,7 @@ export default function About() {
                              dark:border-white/10 dark:bg-white/5"
                 >
                   <div className="text-sm font-medium">{item}</div>
-                  <div className="text-xs text-gray-500 dark:text-white/60">Priority</div>
+                  <div className="text-xs text-gray-500 dark:text-white/60">Learning</div>
                 </motion.div>
               ))}
             </motion.div>
@@ -140,7 +141,7 @@ export default function About() {
             <motion.div variants={itemVariants}>
               <div className="text-xs mb-3 text-gray-500 dark:text-white/60">Core interests</div>
               <div className="flex flex-wrap gap-2">
-                {["Full Stack Dev", "API Design", "Database Modeling", "Performance Optimization"].map((tag, index) => (
+                {["Front-End","Back-End", "API Design", "Database Modeling", "Performance Optimization", "Security",].map((tag, index) => (
                   <motion.span
                     key={tag}
                     initial={{ opacity: 0, scale: 0.8 }}

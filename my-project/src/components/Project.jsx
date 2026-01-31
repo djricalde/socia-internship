@@ -28,12 +28,12 @@ export default function Project() {
 
   const projects = [
     {
-      id: "fullstack-app",
-      title: "Full-Stack Dashboard",
+      id: "capstone-web",
+      title: "Capstone Web",
       description:
-        "A comprehensive data management system with secure authentication and real-time updates.",
-      stack: ["React", "Express", "PostgreSQL", "Tailwind"],
-      demoUrl: "https://example.com",
+        "A Fibear Network Tech. Corp. advertisement websites that includes the internet plan, and wherein you can create an account.",
+      stack: ["HTML", "Tailwind", "Node.js", "MongoDb"],
+      demoUrl: "https://websitecapstone.vercel.app/",
       repoUrl: "https://github.com/example",
     },
     {
@@ -80,7 +80,7 @@ export default function Project() {
           </div>
           
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            Project Showcase
+            Projects
           </h2>
           
           <p className="text-lg max-w-3xl mx-auto text-gray-600 dark:text-white/70">

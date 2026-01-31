@@ -32,7 +32,6 @@ export default function Footer() {
             { icon: Linkedin, href: "https://www.linkedin.com/in/dylan-ricalde-7a940b3a8/", label: "LinkedIn" },
             { icon: Facebook, href: "https://www.facebook.com/dylan.ricalde.5/", label: "Facebook" },
             { icon: Instagram, href: "https://www.instagram.com/dyljr2/", label: "Instagram" },
-            { icon: Mail, href: "#contact", label: "Email", internal: true }
           ].map((social, index) => (
             <motion.a
               key={social.label}

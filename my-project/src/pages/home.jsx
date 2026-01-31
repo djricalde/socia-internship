@@ -215,7 +215,7 @@ export default function Home({ dark, setDark }) {
             }}
             className="mt-6 max-w-xl text-base md:text-lg opacity-80 dark:text-white/80"
           >
-            I am an aspiring Full Stack Developer with a strong foundation in modern web technologies, driven by curiosity and a passion for problem‑solving. I enjoy building scalable, user‑focused applications by combining clean frontend design with efficient backend systems, while continuously learning new tools to sharpen my skills.
+            I am an Front-End Developer who wants to be a Full-Stack Developer. I have a strong foundation in modern web technologies, driven by curiosity and a passion for problem‑solving. I enjoy building scalable, user‑focused applications clean frontend design, while continuously learning backend systems and new tools to sharpen my skills.
           </motion.p>
 
           <motion.div 
@@ -228,7 +228,10 @@ export default function Home({ dark, setDark }) {
             }}
             className="mt-10 flex flex-wrap gap-4"
           >
-            <motion.button 
+            <motion.a 
+            href = "https://github.com/DylanRicalde?tab=repositories"
+              target="_blank"
+            rel="noopener noreferrer"
               whileHover={{ 
                 scale: 1.05,
                 y: -3,
@@ -243,7 +246,7 @@ export default function Home({ dark, setDark }) {
               className="inline-flex items-center gap-2 rounded-full bg-[hsl(231_87%_60%)] px-7 py-2 text-sm md:text-base text-white font-semibold shadow-lg shadow-blue-500/40 hover:opacity-90 transition"
             >
               View Projects →
-            </motion.button>
+            </motion.a>
             <motion.a
   href="/resume.pdf"
   target="_blank"

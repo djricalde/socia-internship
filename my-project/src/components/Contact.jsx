@@ -2,19 +2,59 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { ArrowRight, ExternalLink, Github, Linkedin, Facebook, Instagram, Mail } from "lucide-react";
+import emailjs from '@emailjs/browser';
 
 export default function Contact() {
   const [sending, setSending] = useState(false);
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    message: ''
+  });
 
-  function onSubmit(e) {
+  // Handle input changes
+  const handleChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value
+    });
+  };
+
+  async function onSubmit(e) {
     e.preventDefault();
     setSending(true);
-  
-    window.setTimeout(() => {
-      setSending(false);
-      alert("Message sent! I'll get back to you as soon as possible.");
+
+    // Replace these with your actual EmailJS credentials
+    const serviceID = 'service_hkjpmji';      // e.g., 'service_abc123'
+    const templateID = 'template_z92wti4';    // e.g., 'template_xyz789'
+    const publicKey = 'KdEJGVpG0RObu4sAc';      // e.g., 'abcd1234XYZ'
+
+    try {
+      const result = await emailjs.send(
+        serviceID,
+        templateID,
+        {
+          from_name: formData.name,
+          from_email: formData.email,
+          message: formData.message,
+          reply_to: formData.email,
+          to_email: 'dylanricalde20@gmail.com',
+        },
+        publicKey
+      );
+
+      console.log('Success:', result);
+      alert('Message sent successfully! I\'ll get back to you soon.');
+      
+      // Reset form
+      setFormData({ name: '', email: '', message: '' });
       e.target.reset();
-    }, 700);
+    } catch (error) {
+      console.error('❌ Error:', error);
+      alert('Failed to send message. Please try again or email me directly at dylanricalde20@gmail.com');
+    } finally {
+      setSending(false);
+    }
   }
 
   return (
@@ -57,7 +97,7 @@ export default function Contact() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-            className="rounded-3xl border p-8 shadow-1g
+            className="rounded-3xl border p-8 shadow-lg
                        border-gray-200 bg-white
                        dark:border-blue-500/20 dark:bg-[hsl(225_18%_10%)]"
           >
@@ -71,6 +111,8 @@ export default function Contact() {
                   id="name"
                   name="name"
                   type="text"
+                  value={formData.name}
+                  onChange={handleChange}
                   placeholder="How should I call you?"
                   required
                   className="rounded-xl border px-4 py-3 text-sm transition-all
@@ -90,6 +132,8 @@ export default function Contact() {
                   id="email"
                   name="email"
                   type="email"
+                  value={formData.email}
+                  onChange={handleChange}
                   placeholder="your@email.com"
                   required
                   className="rounded-xl border px-4 py-3 text-sm transition-all
@@ -108,6 +152,8 @@ export default function Contact() {
                 <textarea
                   id="message"
                   name="message"
+                  value={formData.message}
+                  onChange={handleChange}
                   placeholder="What's on your mind?"
                   rows={5}
                   required
@@ -164,7 +210,6 @@ export default function Contact() {
                   { icon: Linkedin, label: "LinkedIn", href: "https://www.linkedin.com/in/dylan-ricalde-7a940b3a8/" },
                   { icon: Facebook, label: "Facebook", href: "https://www.facebook.com/dylan.ricalde.5/" },
                   { icon: Instagram, label: "Instagram", href: "https://www.instagram.com/dyljr2/" },
-                  { icon: Mail, label: "Email", href: "mailto:dylanricalde20@gmail.com" }
                 ].map((social, index) => (
                   <motion.a
                     key={social.label}
