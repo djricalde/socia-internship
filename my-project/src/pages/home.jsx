@@ -1,6 +1,5 @@
 /* eslint-disable no-unused-vars */
 import { motion } from "framer-motion";
-import { useEffect, useState } from "react";
 import { TypeAnimation } from 'react-type-animation';
 import { Github } from "lucide-react";
 import { FileText } from "lucide-react";

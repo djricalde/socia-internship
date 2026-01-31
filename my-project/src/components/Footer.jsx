@@ -1,6 +1,6 @@
 /* eslint-disable no-unused-vars */
 import { motion } from "framer-motion";
-import { Github, Linkedin, Facebook, Instagram, Mail } from "lucide-react";
+
 
 export default function Footer() {
   const year = new Date().getFullYear();
