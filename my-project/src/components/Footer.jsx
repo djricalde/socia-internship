@@ -1,7 +1,6 @@
 /* eslint-disable no-unused-vars */
 import { motion } from "framer-motion";
 
-
 export default function Footer() {
   const year = new Date().getFullYear();
 

@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 import { motion } from "framer-motion";
 import { TypeAnimation } from 'react-type-animation';
-import { Github } from "lucide-react";
+
 import { FileText } from "lucide-react";
 
 export default function Home({ dark, setDark }) {
@@ -276,25 +276,7 @@ export default function Home({ dark, setDark }) {
             }}
             className="mt-10 flex flex-wrap gap-3 text-xs md:text-sm"
           >
-          <motion.a
-  href="https://github.com/DylanRicalde"
-  target="_blank"
-  rel="noopener noreferrer"
-  whileHover={{ 
-    scale: 1.05,
-    y: -3
-  }}
-  whileTap={{ scale: 0.98 }}
-  transition={{ 
-    type: "spring",
-    stiffness: 400,
-    damping: 20
-  }}
-  className="flex items-center gap-1 rounded-full border border-black/5 dark:border-white/10 px-5 py-2 bg-white dark:bg-white/10 dark:text-white shadow-sm hover:bg-black/5 dark:hover:bg-white/20 transition"
->
-  <Github size={18} strokeWidth={1.75} />
-  <span>GitHub</span>
-</motion.a>
+          
           </motion.div>
         </motion.section>
 
