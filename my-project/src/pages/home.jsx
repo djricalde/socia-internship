@@ -44,42 +44,39 @@ export default function Home({ dark, setDark }) {
         className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-8 py-2 bg-white/80 dark:bg-transparent backdrop-blur border-b border-black/5 dark:border-white/5"
       >
         {/* Logo + Title */}
-        <motion.div 
-          initial={{ opacity: 0, x: -20 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ 
-            duration: 0.6,
-            delay: 0.4,
-            ease: [0.16, 1, 0.3, 1]
-          }}
-          className="flex items-center gap-3"
-        >
-          <motion.div 
-            whileHover={{ 
-              rotate: 360,
-              scale: 1.1
-            }}
-            transition={{ 
-              duration: 0.7,
-              ease: [0.16, 1, 0.3, 1]
-            }}
-            className="flex h-10 w-10 items-center justify-center rounded-full bg-[hsl(222_25%_10%)] dark:bg-white text-white dark:text-[hsl(222_25%_10%)] text-xl"
-          >
-            <img 
-              src="/logo.png" 
-              alt="Logo" 
-              className="h-8 w-8 object-contain"
-            />
-          </motion.div>
-          <div>
-            <p className="font-semibold tracking-tight dark:text-white">XerTech.</p>         
-          </div>
-        </motion.div>
+          <motion.a
+  href="#home"
+  className="flex items-center gap-3"
+  whileHover={{ scale: 1.03 }}
+>
+  <motion.div 
+    whileHover={{ 
+      rotate: 360,
+      scale: 1.1
+    }}
+    transition={{ 
+      duration: 0.7,
+      ease: [0.16, 1, 0.3, 1]
+    }}
+    className="flex h-10 w-10 items-center justify-center rounded-full 
+               bg-[hsl(222_25%_10%)] dark:bg-white 
+               text-white dark:text-[hsl(222_25%_10%)] text-xl"
+  >
+    <img 
+      src="/logo.png" 
+      alt="XerTech Home" 
+      className="h-8 w-8 object-contain"
+    />
+  </motion.div>
+
+  <p className="font-semibold tracking-tight dark:text-white">
+    XerTech.
+  </p>
+</motion.a>
 
         {/* Center Nav */}
         <nav className="hidden md:flex items-center justify-center gap-10 text-sm">
           {[
-            { href: "#home", label: "Home" },
             { href: "#about", label: "About" },
             { href: "#skills", label: "Skills" },
             { href: "#project", label: "Project" },
