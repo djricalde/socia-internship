@@ -41,38 +41,35 @@ export default function Home({ dark, setDark }) {
           delay: 0.2,
           ease: [0.16, 1, 0.3, 1]
         }}
-        className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-8 py-2 bg-white/80 dark:bg-transparent backdrop-blur border-b border-black/5 dark:border-white/5"
+        className="fixed top-0 left-41 right-41 z-50 flex items-center justify-between px-8 py-2"
       >
         {/* Logo + Title */}
-          <motion.a
+        <motion.a
   href="#home"
   className="flex items-center gap-3"
   whileHover={{ scale: 1.03 }}
 >
-  <motion.div 
-    whileHover={{ 
-      rotate: 360,
-      scale: 1.1
-    }}
-    transition={{ 
+  <motion.div
+    whileHover={{ rotate: 360, scale: 1.1 }}
+    transition={{
       duration: 0.7,
       ease: [0.16, 1, 0.3, 1]
     }}
     className="flex h-10 w-10 items-center justify-center rounded-full 
-               bg-[hsl(222_25%_10%)] dark:bg-white 
-               text-white dark:text-[hsl(222_25%_10%)] text-xl"
+               bg-[hsl(222_25%_10%)] dark:bg-white"
   >
-    <img 
-      src="/logo.png" 
-      alt="XerTech Home" 
-      className="h-8 w-8 object-contain"
+    <img
+      src="/logo.png"
+      alt="XerTech Home"
+      className="block h-8 w-8 object-contain"
     />
   </motion.div>
 
-  <p className="font-semibold tracking-tight dark:text-white">
+  <span className="flex items-center font-semibold tracking-tight dark:text-white">
     XerTech.
-  </p>
+  </span>
 </motion.a>
+
 
         {/* Center Nav */}
         <nav className="hidden md:flex items-center justify-center gap-10 text-sm">
@@ -118,11 +115,11 @@ export default function Home({ dark, setDark }) {
           onClick={() => setDark(!dark)}
           className="flex items-center gap-2 rounded-full bg-black/5 dark:bg-white/5 px-3 py-1 text-xs font-medium"
         >
-          <span className={`text-[12px] opacity-80 ${dark ? "text-white" : ""}`}>
+          <span className={`text-xs opacity-80 ${dark ? "text-white" : ""}`}>
             {dark ? "Dark" : "Light"}
           </span>
           <span className={`relative inline-flex h-5 w-9 items-center rounded-full transition-colors ${
-            dark ? "bg-[hsl(231_87%_60%)]" : "bg-gray-300"
+            dark ? "bg-[hsl(231_87%_60%)]" : "bg-gray-100"
           }`}>
             <motion.span
               animate={{ x: dark ? 16 : 2 }}
@@ -138,7 +135,7 @@ export default function Home({ dark, setDark }) {
       </motion.header>
 
       {/* Hero Section */}
-      <main className="relative z-10 mx-auto max-w-[1200px] px-8 pt-34 pb-36 grid grid-cols-1 lg:grid-cols-2 gap-24 items-center"
+      <main className="relative z-10 mx-auto max-w-[1200px] px-8 pt-32 pb-36 grid grid-cols-1 lg:grid-cols-2 gap-24 items-center"
       id="home"
       >
        {/* Left */}
