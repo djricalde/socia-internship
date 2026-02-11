@@ -59,27 +59,13 @@ export default function Home({ dark, theme, setTheme, navScrolled = false }) {
         }`}
       >
         <div className="mx-auto flex max-w-[1200px] items-center justify-between px-8">
-        {/* Logo + Title */}
+        {/* Title */}
         <motion.a
           href="#home"
-          className="flex items-center gap-3"
+          className="flex items-center"
           whileHover={{ scale: 1.03 }}
         >
-          <motion.div
-            whileHover={{ rotate: 360, scale: 1.1 }}
-            transition={{
-              duration: 0.7,
-              ease: [0.16, 1, 0.3, 1]
-            }}
-            className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[hsl(222_25%_10%)] dark:bg-white"
-          >
-            <img
-              src="/logo.png"
-              alt="XerTech Home"
-              className="block h-8 w-8 object-contain"
-            />
-          </motion.div>
-          <span className="font-semibold tracking-tight dark:text-white">
+          <span className={`font-semibold tracking-tight ${dark ? "text-white" : "bg-linear-to-r from-blue-600 to-blue-400 bg-clip-text text-transparent"}`}>
             XerTech.
           </span>
         </motion.a>
@@ -108,10 +94,10 @@ export default function Home({ dark, theme, setTheme, navScrolled = false }) {
                 y: -3,
                 transition: { duration: 0.2 }
               }}
-              className={`relative dark:text-white text-base transition-opacity duration-300
-                         after:absolute after:left-0 after:bottom-[-2px] after:block after:h-px after:w-full after:bg-linear-to-r after:from-blue-600 after:to-blue-400 after:content-['']
-                         after:scale-x-0 after:origin-center hover:after:scale-x-100 after:transition-transform after:duration-200
-                         ${navScrolled ? "opacity-40 hover:opacity-70" : "opacity-70 hover:opacity-100"}`}
+              className={`text-base transition-all duration-300
+                         ${dark ? "text-white" : "text-[hsl(222_25%_10%)]"}
+                         ${navScrolled ? "opacity-40 hover:opacity-70" : "opacity-70 hover:opacity-100"}
+                         hover:bg-linear-to-r hover:from-blue-600 hover:to-blue-400 hover:bg-clip-text hover:text-transparent`}
             >
               {link.label}
             </motion.a>
@@ -233,7 +219,7 @@ export default function Home({ dark, theme, setTheme, navScrolled = false }) {
               duration: 0.8,
               ease: [0.16, 1, 0.3, 1]
             }}
-            className="mt-6 text-5xl md:text-6xl font-extrabold leading-tight tracking-tight dark:text-white"
+            className={`mt-6 text-5xl md:text-6xl font-extrabold leading-tight tracking-tight ${dark ? "text-white" : "bg-linear-to-r from-blue-500 to-sky-400 bg-clip-text text-transparent"}`}
           >
             Hi, I'm{" "}
             <TypeAnimation
